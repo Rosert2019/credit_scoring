@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Credit risk notation for a file of records.</h2>
+<div class="container">
+{% if final.uploaded_file_url %}
+  <p>File uploaded at: <a href="{{ final.uploaded_file_url }}">Click here to download. </a></p>
+  <p>Number of scored records: {{final.numb_lines}}</p>
+  <p>Scores frequency : {{final.numb_scores_html|safe}}</p>
+   <p>{{final.div|safe}}</p>
+{% endif %}
+
+<p><a href="{% url 'home' %}" >Return to home</a></p>
+</form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Web app for credit risk rating.</h2>
+<p>The aim of this app is to predict a credit risk by giving a score instead of the probability default. 
+The back end part was made with python django framework, scikit learn, pandas and bokeh librairies.For the frond end, html, css and bootstrap were used.
+The grade is a transformation of probability coefficients obtained with logistic regression to the range 0-100. </p>
+<p>Among given variables, the most significance were used:
+    <ol>
+        <li>Amount of the initial credit</li>
+        <li>The age at the moment of subscription</li>
+        <li>The duration of the credit to be refund</li>
+        <li>The rate at the moment of subscription</li>
+    </ol>
+</p>
+
+<p> All variables were transformed to categorical.</p>
+<p><a href="{% url 'single_view' %}">Clic here to score a single record</a></p>
+<p><a href="{% url 'file_view' %}">Clic here to score a file</a></p>
+{% endblock %}

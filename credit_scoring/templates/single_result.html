@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Credit risk notation of a single record.</h2>
+<div class="container">
+    <table>
+        <tr>
+          <td>Score</td>
+          <td>Grade</td>
+        </tr>
+        <tr>
+          <td>{{single_score.score}}</td>
+          <td>{{single_score.grade}}</td>
+        </tr>
+      </table>
+</div>
+{% endblock %}
